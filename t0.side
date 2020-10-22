@@ -1,0 +1,64 @@
+{
+  "id": "b72368f7-a5b4-45f2-9a8e-71b042682b85",
+  "version": "2.0",
+  "name": "lista",
+  "url": "https://miklt.github.io",
+  "tests": [{
+    "id": "c781ee79-0d49-45f0-8a77-c89f9d3008c8",
+    "name": "Untitled",
+    "commands": [{
+      "id": "bb46a982-f93e-4c1b-b97c-8f05baac23b6",
+      "comment": "",
+      "command": "open",
+      "target": "/todo-list-v0/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0c9daea-7a38-4300-b372-7ab1059cd5e3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1247x1027",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0fec81f2-af9a-4776-84f3-b31a9a1de7e8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.todo:nth-child(1)",
+      "targets": [
+        ["css=.todo:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6553d08f-34bf-4793-b7bc-7425cce7a8ae",
+      "comment": "",
+      "command": "click",
+      "target": "css=.todo:nth-child(1)",
+      "targets": [
+        ["css=.todo:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "223c4daa-8783-4d14-870f-eb63554752aa",
+      "comment": "",
+      "command": "assert",
+      "target": "css=.todo:nth-child(1)",
+      "targets": [],
+      "value": "Criar aplicação"
+    }]
+  }],
+  "suites": [{
+    "id": "9e69a031-f2a1-42b6-9f05-1fa41cee4605",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c781ee79-0d49-45f0-8a77-c89f9d3008c8"]
+  }],
+  "urls": ["https://miklt.github.io/"],
+  "plugins": []
+}
