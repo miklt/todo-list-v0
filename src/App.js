@@ -78,9 +78,9 @@ function App() {
         <h1>Mais uma "todo list..."</h1>
         
       <ul>
-        <li>Adicione itens no quadrado amarelo e aperte enter.</li>
-         <li>  Clique no ✔ indicar uma tarefa feita</li>
-         <li> Clique no x para remover uma tarefa</li>
+        <li>Digite alguma tarefa no quadrado amarelo e aperte enter.</li>
+         <li>Clique no ✔ indicar uma tarefa feita</li>
+         <li>Clique no x para remover uma tarefa</li>
          </ul>
       </div>
       <div className="todo-list">
