@@ -1,0 +1,226 @@
+{
+  "id": "b72368f7-a5b4-45f2-9a8e-71b042682b85",
+  "version": "2.0",
+  "name": "TestesSelenium",
+  "url": "https://miklt.github.io",
+  "tests": [{
+    "id": "c781ee79-0d49-45f0-8a77-c89f9d3008c8",
+    "name": "T0 - Listar",
+    "commands": [{
+      "id": "bb46a982-f93e-4c1b-b97c-8f05baac23b6",
+      "comment": "",
+      "command": "open",
+      "target": "/todo-list-v0/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0c9daea-7a38-4300-b372-7ab1059cd5e3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1247x1027",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3e97095-83ad-4b0d-9c8a-3db8f446f5ef",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='root']/div/div[2]/div[1]/div[1]",
+      "targets": [
+        ["css=.todo:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": "Criar aplicação"
+    }, {
+      "id": "7a2aaf1b-e867-4b38-97d8-06ce72bae89c",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='root']/div/div[2]/div[2]/div[1]",
+      "targets": [
+        ["css=.todo:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": "Preparar apresentação"
+    }, {
+      "id": "863b879d-5f18-4f16-a283-ebac9cfd1eb3",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='root']/div/div[2]/div[3]/div[1]",
+      "targets": [
+        ["css=.todo:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": "Testar usando selenium"
+    }]
+  }, {
+    "id": "e9511fcf-a91c-41ea-ac51-8d1edc1c1381",
+    "name": "T1 - Adicionar",
+    "commands": [{
+      "id": "0625b0c5-ee89-4646-a3e0-fa7903b407a1",
+      "comment": "",
+      "command": "open",
+      "target": "/todo-list-v0/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "236cc0fd-1229-4a14-9153-d9b0ce1a2643",
+      "comment": "",
+      "command": "click",
+      "target": "css=.input",
+      "targets": [
+        ["css=.input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e40201c-6df6-4410-a20d-93d6c602a374",
+      "comment": "",
+      "command": "type",
+      "target": "css=.input",
+      "targets": [
+        ["css=.input", "css:finder"],
+        ["xpath=//input[@value='Uma nova tarefa']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Uma nova tarefa"
+    }, {
+      "id": "a2826f6f-3d70-43f8-bf79-c26747763cb2",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=.input",
+      "targets": [
+        ["css=.input", "css:finder"],
+        ["xpath=//input[@value='Uma nova tarefa']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "d7da383d-191b-4e31-ac8a-645d9ffee27f",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='root']/div/div[2]/div[4]/div[1]",
+      "targets": [],
+      "value": "Uma nova tarefa"
+    }]
+  }, {
+    "id": "d6719ad5-9fea-44e8-b9d1-dc5f96c508f9",
+    "name": "T2 - Completar Tarefa",
+    "commands": [{
+      "id": "6b1f91aa-51fb-436f-89ac-4fba95015370",
+      "comment": "",
+      "command": "open",
+      "target": "/todo-list-v0/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52aa3fb2-7aa6-4917-9aa2-60b74e42f187",
+      "comment": "",
+      "command": "click",
+      "target": "css=.todo:nth-child(1) .green-symbol",
+      "targets": [
+        ["css=.todo:nth-child(1) .green-symbol", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'✓')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f580009-6895-41e5-b362-360149f9e614",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.todo[style=\"text-decoration: line-through;\"]",
+      "targets": [
+        ["css=.todo:nth-child(2) > div:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "1300084d-20a8-475f-b503-54c6e5dafafc",
+    "name": "T3 - Remover Tarefa",
+    "commands": [{
+      "id": "198c4670-8934-489b-b10b-4bfaad5b26fb",
+      "comment": "",
+      "command": "open",
+      "target": "/todo-list-v0/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d806e5b7-fcab-4f1e-825d-be965c16052f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1247x1027",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6533a9ec-2369-4912-ad4a-a5a8f511c34d",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='root']/div/div[2]/div[1]/div[1]",
+      "targets": [
+        ["css=.todo:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": "Criar aplicação"
+    }, {
+      "id": "42726e4e-5d79-4334-9bb4-af1b67ab3dba",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='root']/div/div[2]/div[2]/div[1]",
+      "targets": [
+        ["css=.todo:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": "Preparar apresentação"
+    }, {
+      "id": "fb6ba12d-68ce-47fc-af48-f23aa2e0ab8c",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='root']/div/div[2]/div[3]/div[1]",
+      "targets": [
+        ["css=.todo:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": "Testar usando selenium"
+    }, {
+      "id": "71add809-8353-4803-8bff-bfce54fce8f5",
+      "comment": "Apago a tarefa \"Criar aplicação\"",
+      "command": "click",
+      "target": "css=.todo:nth-child(1) .red-symbol",
+      "targets": [
+        ["css=.todo:nth-child(1) .red-symbol", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/div/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'x')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bafc4558-13c7-406f-8b28-68a164af3265",
+      "comment": "",
+      "command": "verifyElementNotPresent",
+      "target": "//div[contains(.,'Criar')]",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9e69a031-f2a1-42b6-9f05-1fa41cee4605",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c781ee79-0d49-45f0-8a77-c89f9d3008c8"]
+  }],
+  "urls": ["https://miklt.github.io/"],
+  "plugins": []
+}
